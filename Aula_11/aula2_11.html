@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nationalidade</title>
+</head>
+<body>
+    <h1>Sistema de Nationalidade</h1>
+    Sua Nationalidade é : <input type="text" name="nome" id="nome">
+    <input type="button" value="enter" onclick="statut()">
+    <div id="sta" >
+
+    </div>
+
+    <script>
+
+        function statut(){
+            var pais = document.querySelector('input#nome')
+            var sta = document.querySelector('#sta')
+            var txtn = String(pais.value)
+            if (txtn == 'brasileira'){
+                sta.innerHTML = `<p>você é de nacinalidade <strong> ${txtn}</strong></p> `
+            }
+            else {
+                sta.innerHTML= '<p> vocé é <strong> estrangeiro </strong> </p>'
+            }
+            
+            sta.innerHTML += 'parabens ' 
+        }
+
+    </script>
+</body>
+</html>
